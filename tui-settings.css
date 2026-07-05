@@ -1,5 +1,30 @@
 :root {
-	--playlist-height: 609px;
-	--search-height: 400px;
-	--main-height: 197px;
+    /* ADJUST THESE TWO IF THE MARGINS LOOK OFF */
+    --playlist-height: 615px;
+    --main-height: 203px;
+    /*larger value > smaller element*/
+
+    --search-height: 400px;
+    /*larger value > larger element*/
+
+    --font-size: 13px;
+    --font-weight: 400;
+    /* 200 : 900 */
+    --line-height: 1.2;
+    --font-size-lyrics: 18px;
+    --font-family-header: "asciid";
+    --font-size-multiplier-header: 4;
+
+    --artist-rounding: 0;
+    /* 0 or 50% */
+    --border-radius: 0px;
+    --border-width: 1px;
+    --border-style: solid;
+    /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+    --margin: 10px;
+    --tui-main: #000;
+    --tui-border-active: #15cfa0;
+    --tui-border-inactive: #8c8c8c;
+    --tui-highlight: #fff;
 }
+
