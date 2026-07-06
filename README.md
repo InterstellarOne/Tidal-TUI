@@ -30,5 +30,5 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-TUI/refs/heads/main/tida
 ```
 7. Press **Ctrl + E** to open the theme editor.
 8. Go to the the file linked below, copy the contents, and paste them into the theme editor. \
-https://raw.githubusercontent.com/InterstellarOne/Tidal-TUI/refs/heads/main/tui-settings.css
+https://github.com/InterstellarOne/Tidal-TUI/blob/main/tui-settings.css
 9. Adjust the top two variables so that the margin between the player bar and the sections above looks correct. You are also free to adjust the other variables.
