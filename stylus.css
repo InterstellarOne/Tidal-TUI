@@ -1,4 +1,4 @@
-/*v1.0.2*/
+/*v1.0.3*/
 /* user settings */
 :root {
 	--playlist-height: 655px;
@@ -442,7 +442,8 @@ a._item_8056dae,
 [class*="_imageContainer_"] img,
 [data-test="feed-counter"],
 [class*="submenuItem"],
-div.ReactModal__Content {
+div.ReactModal__Content,
+[data-test="artist-info-card"]{
 	border-radius: var(--border-radius) !important;
 }
 
