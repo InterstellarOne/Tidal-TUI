@@ -1,4 +1,4 @@
-/*v1.0.0*/
+/*v1.0.3*/
 :root {
 	--font-family: "JetBrains Mono", monospace;
 	--wave-color-solid-accent-fill: var(--tui-border-active) !important;
@@ -17,7 +17,8 @@
 [class*="timeColumn"],
 button,
 [class*="title"],
-[class*="textarea"] {
+[class*="textarea"],
+[data-test="grid-item-detail-text-title-artist"] {
 	font-family: var(--font-family) !important;
 	font-size: var(--font-size) !important;
 	font-weight: var(--font-weight) !important;
@@ -28,7 +29,8 @@ button,
 [data-test="page-links-cloud-btn"],
 [data-test="mix-button"] svg,
 ._header_bc956e1,
-[class*="_selectableText_"] {
+[class*="_selectableText_"],
+[data-test="grid-item-detail-text-title-artist"] {
 	color: var(--tui-highlight);
 }
 
@@ -208,6 +210,10 @@ button._button_6808704:nth-child(2)::before {
 	background-color: transparent;
 	color: var(--tui-border-active) !important;
 	position: relative;
+}
+
+[class*="_repeatButton_"] {
+    margin-top: 8px !important;
 }
 
 [data-test="previous"],
@@ -419,7 +425,8 @@ a._item_8056dae,
 [class*="_imageContainer_"] img,
 [data-test="feed-counter"],
 [class*="submenuItem"],
-div.ReactModal__Content {
+div.ReactModal__Content,
+._card_81a423e {
 	border-radius: var(--border-radius) !important;
 }
 
@@ -706,6 +713,11 @@ div.ReactModal__Content {
 	background: var(--tui-main)
 }
 
+/* add to playlist */
+body > div.ReactModalPortal > div > div {
+    background-color: var(--tui-main) !important;
+}
+
 /* header */
 #mainHeader {
 	border: var(--border-width) var(--border-style);
@@ -716,9 +728,10 @@ div.ReactModal__Content {
 	max-width: calc(100% - var(--playQueueWidth, 0px) - 260px);
 	margin-bottom: 0px;
 	transform: translateX(-10px) translateY(6px);
-	height: 20px;
+	height: 34px;
 	background: var(--tui-main);
 }
+
 
 ._header_3fe665f._scrolled_38d655a::before {
 	opacity: 0;
@@ -744,6 +757,10 @@ div.ReactModal__Content {
 	background: var(--tui-main);
 }
 
+[data-test="search-popover-container"] {
+    transform: translateY(2px) !important;
+}
+
 :is(:is(._container_cb5cbe4 ._searchFieldWithPopover_267e090) .popoverWithinSearchFieldWithPopover) > div:first-of-type {
 	max-height: calc(100svh - var(--search-height));
 	margin-top: 1px;
@@ -755,7 +772,8 @@ div.ReactModal__Content {
 }
 
 [data-test="search-popover-container"] {
-	margin-right: -30px
+	margin-right: -30px;
+    transform: translateY(-75px);
 }
 
 div._searchField_b2eb7f7 > button svg {
@@ -765,7 +783,9 @@ div._searchField_b2eb7f7 > button svg {
 /*arrows*/
 [data-test="navigation-arrows"] {
 	background: transparent;
-	transform: translateX(-12px);
+	transform: translateX(-12px) translateY(3px);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important
 }
 
 ._button_6808704 {
@@ -789,7 +809,9 @@ div._container_5116191 {
 }
 
 [class*="_profilePicture_"] {
-	margin-right: -51px;
+	margin-right: -43px;
+    margin-top: 3px;
+    z-index: -1;
 }
 
 /* home feed */
@@ -1011,6 +1033,7 @@ div._container_5116191 {
 	margin-top: 16px;
 	background: transparent;
 	backdrop-filter: none;
+    transform: translateY(-73px);
 }
 [data-test="search-results-top"] ._container_711d272::before,
 [data-test="search-results-normal"] ._container_711d272::before {
@@ -1019,11 +1042,14 @@ div._container_5116191 {
 	top: 0;
 	margin-top: 57px;
 	left: 2px;
-	width: 95%;
+	width: 98%;
 	height: 60%;
 	background-color: var(--tui-main) !important;
 	z-index: -1 !important;
 	box-shadow: none !important
+}
+[class*="_resultsPageWrapper_"] {
+    margin-top: -75px !important;
 }
 
 /* Quality */
