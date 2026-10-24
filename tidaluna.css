@@ -1,7 +1,8 @@
-/*v1.0.3*/
+/*v1.0.4*/
 :root {
 	--font-family: "JetBrains Mono", monospace;
 	--wave-color-solid-accent-fill: var(--tui-border-active) !important;
+    --lyrics-blur-strength: 0 !important;
 }
 
 [class*="searchField"],
@@ -30,7 +31,9 @@ button,
 [data-test="mix-button"] svg,
 ._header_bc956e1,
 [class*="_selectableText_"],
-[data-test="grid-item-detail-text-title-artist"] {
+[data-test="grid-item-detail-text-title-artist"],
+[data-test="empty-state-purchase-badge"],
+._link_6a45a19 {
 	color: var(--tui-highlight);
 }
 
@@ -989,6 +992,29 @@ div._container_5116191 {
 
 ._smallHeader_f2c3791:before {
 	content: "";
+	position: absolute;
+	top: 0;
+	margin-top: 58px;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	background-color: var(--tui-main) !important;
+	z-index: -1 !important;
+}
+
+._smallHeader_224566f {
+    	background-color: transparent !important;
+	backdrop-filter: none !important;
+	width: calc(100vw - var(--sidebarWidth) - var(--playQueueWidth, 0px) - 30px) !important;
+	margin-left: 2px;
+	z-index: 1 !important;
+	transition: opacity .2s ease-out !important;
+    transform: translateY(15px) !important;
+	box-shadow: none;
+}
+
+._smallHeader_224566f:before {
+    content: "";
 	position: absolute;
 	top: 0;
 	margin-top: 58px;
